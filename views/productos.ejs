@@ -1,0 +1,35 @@
+<%- include ('Layouts/header.ejs') -%>
+<p></p>
+<div class="col-sm-2">
+    <div class="card">
+      <div class="card-body">
+        <p></p>
+        <p>
+            <a href="agregar" class="btn btn-primary">Agregar Nueva Key</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row p-3">
+    <% for(var i = 0; i<Keys.length; i++){ %>
+      <div class="col-sm-2">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"><%= Keys[i].Nombre %> </h5>
+            <img src="<%= Keys[i].Imagen %>" width="100px" alt="" height="130px">
+            <p class="card-text"><%= Keys[i].Descripcion %> </p>
+            <p class="card-text">Plataforma: <%= Keys[i].Plataforma %> </p>
+            <p>
+                <a href="#" class="btn btn-primary">Comprar: $<%= Keys[i].Precio %></a>
+                <p></p>
+                <a href="/eliminar/<%= Keys[i].ID %>" class="btn btn-secondary">Eliminar</a>
+                <a href="/editar/<%= Keys[i].ID %>" class="btn button">Editar</a>
+            </p>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    <% } %>
+    <p></p>
+<%- include ('Layouts/footer.ejs') -%>

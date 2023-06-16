@@ -1,0 +1,29 @@
+<%- include ('Layouts/header.ejs') -%>
+    <div class="container">
+        <div class="row"></div>
+            <div class="col">
+
+            </div>
+            <div class="col">
+                <h2 class="fw-bold text-center py-5">Inicio de Sesion</h2>
+
+                <!--Login-->
+                <form action="/auth" method="post">
+                    <div class="mb-4">
+                        <label for="email" class="form-label">Correo Electronico</label>
+                        <input type="email" class="form-control" name="email" id="email">
+                    </div>
+                    <div class="mb-4">
+                        <label for="password" class="form-label">Contrasena</label>
+                        <input type="password" class="form-control" name="password" id="password">
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary">Iniciar Sesion</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="bootstrap.bundle.min.js"></script>
+<%- include ('Layouts/footer.ejs') -%>
